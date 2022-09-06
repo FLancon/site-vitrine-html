@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Izmir Kebab</title>
+	</head>
+	<body>
+		<header>
+			<!-- Landing Section -->
+			<div class="background">
+				<img src="./ASSETS/kebab_logo_.png" alt="" />
+				<p>Appelez-nous pour déguster nos meilleurs plats:</p>
+				<br />
+				<a href="tel:+33321806533">03 21 80 65 335</a>
+				<br />
+				<br />
+				<button class="button" role="button">
+					<a href="#menu">Nos Menus</a>
+				</button>
+			</div>
+		</header>
+
+		<!-- testimonies section -->
+		<div class="testimonials">
+			<div class="inner">
+				<h1>Témoignages</h1>
+				<div class="border"></div>
+				<div class="row">
+					<div class="col">
+						<script>
+							!(async function () {
+								let obj;
+								// Fetch Google reviews of the shop
+								const res = await fetch(
+									"https://api.reviewsmaker.com/gmb/?placeid=ChIJOe9avEcs3EcRyAoHK6-Eq8U"
+								);
+
+								obj = await res.json();
+
+								// Store 3 reviews								
+								review1 = await obj.reviews[0];
+								review2 = await obj.reviews[1];
+								review3 = await obj.reviews[2];
+
+								let img0 = document.getElementById("img0");
+								img0.src = review1.reviewAuthorImage;
+								let img1 = document.getElementById("img1");
+								img1.src = review2.reviewAuthorImage;
+								let img2 = document.getElementById("img2");
+								img2.src = review3.reviewAuthorImage;
+
+								let name0 = document.getElementById("name0");
+								name0.innerHTML = review1.reviewAuthor;
+								let name1 = document.getElementById("name1");
+								name1.innerHTML = review2.reviewAuthor;
+								let name2 = document.getElementById("name2");
+								name2.innerHTML = review3.reviewAuthor;
+
+								let stars0 = document.getElementById("stars0");
+								stars0.innerHTML = `★ ${review1.reviewRating} / 5`;
+								let stars1 = document.getElementById("stars1");
+								stars1.innerHTML = `★ ${review2.reviewRating} / 5`;
+								let stars2 = document.getElementById("stars2");
+								stars2.innerHTML = `★ ${review3.reviewRating} / 5`;
+							})();
+						</script>
+
+						<div class="testimonial">
+							<img
+								id="img0"
+								src="./ASSETS/kebab_logo_.png"
+								alt=""
+							/>
+							<div id="name0">FULL NAME</div>
+							<div id="stars0">★ NOTE / 5</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="testimonial">
+							<img
+								id="img1"
+								src="./ASSETS/kebab_logo_.png"
+								alt=""
+							/>
+							<div id="name1">FULL NAME</div>
+							<div id="stars1">★ NOTE / 5</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="testimonial">
+							<img
+								id="img2"
+								src="./ASSETS/kebab_logo_.png"
+								alt=""
+							/>
+							<div id="name2">FULL NAME</div>
+							<div id="stars2">★ NOTE / 5</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu">
+			<div class="grid-container">
+				<div
+					class="grid-item"
+					style="
+						background-image: url('./ASSETS/menu1.jpg');
+						background-size: contain;
+						background-repeat: no-repeat;
+					"
+				></div>
+				<div
+					class="grid-item"
+					style="
+						background-image: url('./ASSETS/menu2.jpg');
+						background-size: contain;
+						background-repeat: no-repeat;
+					"
+				></div>
+				<div
+					class="grid-item"
+					style="
+						background-image: url('./ASSETS/menu3.jpg');
+						background-size: contain;
+						background-repeat: no-repeat;
+					"
+				></div>
+				<div
+					class="grid-item"
+					style="
+						background-image: url('./ASSETS/menu4.jpg');
+						background-size: contain;
+						background-repeat: no-repeat;
+					"
+				></div>
+				<div
+					class="grid-item"
+					style="
+						background-image: url('./ASSETS/menu5.jpg');
+						background-size: contain;
+						background-repeat: no-repeat;
+					"
+				></div>
+				<div
+					class="grid-item"
+					style="
+						background-image: url('./ASSETS/menu6.jpg');
+						background-size: contain;
+						background-repeat: no-repeat;
+					"
+				></div>
+			</div>
+		</div>
+
+		<div class="separator"></div>
+		<div class="row">
+			<div class="column">
+				<div class="map-responsive">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10102.03558741706!2d1.6103654!3d50.7290496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc5ab84af2b070ac8!2sIzmir%20Kebab!5e0!3m2!1sen!2sfr!4v1662469709155!5m2!1sen!2sfr"
+						width="600"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					></iframe>
+				</div>
+			</div>
+			<div
+				class="column"
+				style="
+					background-image: url('http://www.kebaborientexpressmahon.com/img/bgtex1.jpg');
+				"
+			>
+				<p>
+					Le meilleur kebab de Boulogne-sur-Mer<br />(probablement)<br /><br />99
+					Bd de Clocheville, 62200 Boulogne-sur-Mer
+				</p>
+				<img src="./ASSETS/RESTO.png" alt="" />
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

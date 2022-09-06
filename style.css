@@ -1,0 +1,222 @@
+* {
+	margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.background {
+	height: 100vh;
+	background: url(./ASSETS/bg.jpg);
+	background-position: center center;
+	width: 100%;
+	text-align: center;
+}
+
+.background a {
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+}
+
+.background p {
+	margin-top: 60px;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+}
+
+.background img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	padding-top: 10%;
+}
+
+.testimonials {
+	height: 50vh;
+	padding: 100px 0;
+	background: url(./ASSETS/kebab.jpg);
+	background-size: cover;
+	color: #0e1e40;
+	text-align: center;
+	background-position: center center;
+}
+
+.inner {
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 20px;
+}
+
+.inner h1 {
+	color: white;
+	font-size: 3rem;
+}
+
+.border {
+	width: 160px;
+	height: 5px;
+	background: #0e1e40;
+	margin: 26px auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.col {
+	flex: 33.33%;
+	max-width: 33.33%;
+	box-sizing: border-box;
+	padding: 15px;
+}
+.testimonial {
+	background: #fff;
+	padding: 30px;
+}
+.testimonial img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+#name {
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+#stars {
+	color: #0e1e40;
+	margin-bottom: 20px;
+}
+
+#menu {
+	height: 100vh;
+	background: url(./ASSETS/bgisla.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	column-gap: 50px;
+	row-gap: 10px;
+	height: 100vh;
+}
+
+.grid-item {
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.separator {
+	height: 50vh;
+	background-image: url(./ASSETS/interior_kebab_2018.jpg);
+	background-position: center center;
+}
+.contact {
+	display: inline-block;
+	height: 100vh;
+	width: 100%;
+	background-color: grey;
+}
+.map {
+	width: 50%;
+}
+.info {
+	right: 0;
+	width: 50%;
+	background-color: #6ab04c;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 50%;
+	height: 100vh;
+}
+
+.column p {
+	width: 750px;
+	text-align: center;
+	font-size: 2rem;
+	color: #0e1e40;
+	margin-top: 100px;
+}
+.column img {
+	width: 500px;
+	margin-top: 100px;
+	margin-left: 140px
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* GOOGLE MAP */
+.map-responsive {
+	overflow: hidden;
+	padding-bottom: 100%;
+	position: relative;
+	height: 0;
+}
+.map-responsive iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+/* BUTTON */
+.button {
+	margin: 10px;
+	padding: 15px 30px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	border-radius: 10px;
+	border: 0px;
+	font-weight: 700;
+	box-shadow: 0px 0px 14px -7px #f09819;
+	background-image: linear-gradient(
+		45deg,
+		#ff512f 0%,
+		#f09819 51%,
+		#ff512f 100%
+	);
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.button a {
+	font-size: 1rem;
+	color: white;
+
+}
+
+.button:hover {
+	background-position: right center;
+	/* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+}
+
+.button:active {
+	transform: scale(0.95);
+}
